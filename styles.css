@@ -1,0 +1,702 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #9d232d;
+  --secondary-color: #212429;
+  --text-light: #d1d5db;
+  --white: #ffffff;
+  --max-width: 1300px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+} 
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+ 
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  margin-inline: auto;
+  z-index: 9;
+}
+
+.nav__header {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.nav__logo a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+} 
+
+.nav__logo img {
+  display: flex;
+  max-width: 36px;
+  filter: invert(100%);
+}
+
+.nav__logo span {
+  display: none;
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.nav__links {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  transition: 0.5s;
+  z-index: -1;
+  transform: translateY(-100%);
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.nav__links a:hover {
+  color: var(--secondary-color);
+}
+
+.nav__logo span:hover {
+  color: var(--primary-color);
+}
+/* Page Slide Transition */
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("imgs/starry night beach.jpg") center/cover no-repeat fixed;
+  backdrop-filter: blur(10px);     /* blur strength */
+  -webkit-backdrop-filter: blur(10px); /* for Safari */
+  transform: translateX(100%);
+  transition: transform 0.7s ease-in-out;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.page-transition.active {
+  transform: translateX(0);
+}
+
+.home-sec{
+  background-image: linear-gradient(rgba(25, 24, 24, 0.3), rgba(0,0,0,0.3)),url("imgs/StarryNight1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header__container {
+
+  width: 100%;
+  max-width: 100%;
+  padding-inline: 7rem;
+  display: grid;
+  gap: 2rem;
+  height: 100vh;
+
+}
+.header__image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: inherit;
+    padding-left: inherit;
+    gap: 1rem;
+  }
+  
+  .header__image img {
+    width: 100%;
+    max-width: 300px; 
+    aspect-ratio: 1 / 1; 
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #891d26;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(
+    rgba(137, 29, 38, 0.3),
+    rgba(0, 0, 0, 0.3)
+    );
+    cursor: pointer;
+  }
+  
+  .header__image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+
+.header__content {
+  overflow: hidden;
+  text-align: center;
+}
+
+.header__content h2 {
+  position: relative;
+  isolation: isolate;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-align: right;
+}
+
+.header__content h2::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-100% - 1rem), -50%);
+  height: 2px;
+  width: 220%;
+  background-color: var(--white);
+}
+
+.header__content h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 3.3rem;
+}
+.h1__span-1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  line-height: 4rem;
+}
+.h3__title{
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.h3__span-1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  line-height: 2rem;
+}
+
+.h3__span-2 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.header__content p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+  text-align:justify;
+}
+
+.header__content .btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header__content .btn:hover {
+  color: var(--primary-color);
+  background-color: var(--white);
+}
+
+.socials {
+  padding-block: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.socials a {
+  font-size: 1.5rem;
+  color: var(--text-light);
+}
+
+.socials a:hover {
+  color: var(--primary-color);
+}
+
+@media (width > 768px) {
+  nav {
+
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav__header {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__logo span {
+    display: flex;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 3rem;
+    background-color: transparent;
+    transform: none;
+  }
+
+  .nav__links a:hover {
+    color: var(--primary-color);
+  }
+
+  .header__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding-block: 2rem;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .header__content {
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+}
+.divid {
+  height: 7px;
+  background: linear-gradient(to left, transparent, #a12727, transparent);
+  margin: 0 auto;
+  width: 70%;
+}
+
+/* === About Section === */
+.about-sec {
+  padding: 5rem 1.5rem;
+  height: auto;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("imgs/StarryNight1.jpg") center/cover no-repeat fixed;
+  color: var(--white);
+  min-height: 90vh;
+}
+
+.about-sec h2 {
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #8d2e3e, #ffce54, #853c14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-desc {
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
+  color: var(--text-light);
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* About Card Styles (similar to project cards) */
+.about-card {
+  background-image: linear-gradient(rgba(105, 34, 34, 0.5), rgba(0,0,0,0.5));
+  border-radius: 16px;
+  padding: 1.8rem;
+  min-height: 320px;  
+  max-height: 340px;  
+  text-align: left;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff758c, #8d0b0b, #8247438f);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.about-card h3 {
+  color: rgb(228, 164, 164);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-shadow: 0 0 6px rgb(210, 0, 0);
+}
+
+.about-card p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.5;
+
+  max-height: 210px;       
+  overflow-y: auto;          /* enable scroll when text exceeds */
+  padding: 0.6rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  
+  /* hide scrollbars for clean look */
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+
+}
+.about-card p::-webkit-scrollbar {
+  display: none;             /* Chrome/Safari */
+}
+
+/* Hover Effect */
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-sec h2 {
+    font-size: 2rem;
+  }
+  .about-desc {
+    font-size: 1rem;
+  }
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+  .about-card p {
+    font-size: 0.9rem;
+  }
+}
+
+.about-card .degree {
+  color: #ffce54;              /* golden highlight */
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px rgba(255, 206, 84, 0.7); /* glowing effect */
+}
+
+.about-card .college {
+  color: #82cfff;              /* soft glowing cyan */
+  font-weight: 500;
+  text-shadow: 0 0 6px rgba(130, 207, 255, 0.7);
+  display: inline-block;
+  margin: 0.3rem 0;
+}
+
+.about-card .desc {
+  color: #e0e0e0;              /* soft white/gray */
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.about-card .highlight {
+  color: rgb(228, 164, 164);
+  font-weight: 600;
+  text-shadow: 0 0 6px rgb(210, 0, 0);
+}
+
+/* Contact section  */
+.contact-sec {
+  border-top: 8px  var(--primary-color);
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+  height: 90vh;
+
+}
+.contact-sec h2 {
+  font-size: 2rem;
+  margin-bottom: 50px;
+}
+.contact-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  padding: 20px;
+  background: rgba(102, 87, 87, 0.229);
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+.contact-item:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-4px);
+}
+.contact-item i {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.contact-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  word-break: break-word;
+  color: hsl(180, 5%, 85%);
+}
+.contact-item a {
+  color: #c6e4e8;
+  text-decoration: none;
+}
+.contact-item a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 600px) {
+  .contact-item {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+
+/* === Projects Page Styles === */
+body.projects-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+              url("imgs/starry night beach.jpg") center/cover no-repeat fixed;
+  color: white;
+}
+
+main {
+  flex: 1;
+}
+
+/* Section */
+.projects-sec {
+  padding: 5rem 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.projects-sec h2 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #8d2e3e, #ffce54, #853c14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Project Card */
+.project-card {
+  background-image: linear-gradient(rgba(105, 34, 34, 0.5), rgba(0,0,0,0.5));
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 420px; 
+  z-index: 1;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 4px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff758c, #8d0b0b, #8247438f);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project-content {
+  padding: 1.2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-content h3 {
+  color: #ffce54;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+}
+
+.project-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  flex: 1;
+  max-height: 130px; 
+  overflow-y: auto;
+  padding: 0.6rem;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Hide scrollbar in Chrome/Safari */
+.project-content p::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hover Effect */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+
+.project-card:hover img {
+  transform: scale(1.15);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(0, 0, 0, 0.6);
+  margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-sec {
+    padding: 3rem 1rem;
+  }
+
+  .projects-sec h2 {
+    font-size: 1.9rem;
+  }
+
+  .project-card {
+    height: auto;
+  }
+
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+    max-height: 80px;
+  }
+}
+
+footer {
+  text-align: center;
+  padding-top: 40px;
+  background-image: linear-gradient(rgba(105, 34, 34, 0.5), rgba(0,0,0,0.5));
+  font-size: 0.9em;
+}
+footer p {
+  color: #cfaca1;
+  text-decoration: none;
+  padding-bottom: 20px;
+}

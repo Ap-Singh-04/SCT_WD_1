@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
+  <title>Projects | Apsingh Portfolio</title>
+</head>
+<body class="projects-page">
+
+  <!-- Navbar -->
+  <nav>
+    <div id="home" class="nav__header">
+      <div class="nav__logo">
+        <a href="index.html">
+          <img src="imgs/ApLogo.png" alt="logo" />
+          <span>SOFT</span>
+        </a>
+      </div>
+      <div class="nav__menu__btn" id="menu-btn">
+        <i class="ri-menu-line"></i>
+      </div>
+    </div>
+    <ul class="nav__links" id="nav-links">
+      <li><a href="index.html#home">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="project.html" class="active">Projects</a></li>
+      <li><a href="index.html#con">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Projects Section -->
+  <main>
+    <section id="projects" class="projects-sec">
+      <h2 class="my">My Projects</h2>
+      <div class="projects-grid">
+        
+        <a href="https://ap-singh-04.github.io/SCT_WD_2/" target="_blank" class="project-card">
+          <img src="imgs/Calc.png" alt="Calculator Web App" />
+          <div class="project-content">
+            <h3>Calculator Web App</h3>
+            <p>A versatile calculator that lets you switch seamlessly between standard and scientific modes, handling everything from basic arithmetic to advanced functions like trigonometry, logarithms, and exponents.</p>
+          </div>
+        </a>
+
+        <a href="https://ap-singh-04.github.io/SCT_WD_4/" target="_blank" class="project-card">
+          <img src="imgs/Todo.png" alt="To-Do-list" />
+          <div class="project-content">
+            <h3>To-Do-List</h3>
+            <p>A smart To-Do List app with time and date scheduling, editable events, and real-time task tracking that shows total tasks and completed progress.</p>
+          </div>
+        </a>
+
+        <a href="https://ap-singh-04.github.io/SCT_WD_3/" target="_blank" class="project-card">
+          <img src="imgs/Tic.png" alt="Tic_tac_toe" />
+          <div class="project-content">
+            <h3>Tic-Tac-Toe</h3>
+            <p>An interactive Tic Tac Toe game that expands classic play with customizable boards from 2×2 up to 5×5. It includes score tracking for each player, ensuring fun, competitive, and replayable matches.</p>
+          </div>
+        </a>
+        
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ApSinghSoft. All rights reserved.</p>
+  </footer>
+  <div class="page-transition active"></div>
+  <script >const transitionEl = document.querySelector(".page-transition");
+    const navLinksAll = document.querySelectorAll("nav a");
+    
+    navLinksAll.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        const target = link.getAttribute("href");
+    
+        if (!target.startsWith("http") && !target.startsWith("#")) {
+          e.preventDefault();
+    
+          transitionEl.classList.add("active");
+    
+          setTimeout(() => {
+            window.location.href = target;
+          }, 700);
+        }
+      });
+    });
+    
+    window.onload = () => {
+      const transitionEl = document.querySelector(".page-transition");
+      if (transitionEl) {
+        transitionEl.classList.remove("active");
+      }
+    };
+    
+    </script>
+</body>
+</html>
