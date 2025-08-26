@@ -179,26 +179,26 @@ nav {
 
 .header__content h2 {
   position: relative;
-  isolation: isolate;
-  max-width: fit-content;
-  margin-left: auto;
-  margin-bottom: 1rem;
+  display: flex;   
+  align-items: center;
+  justify-content: center;     
+  gap: 1rem;             
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--primary-color);
-  text-align: right;
+  text-align: center;
+  margin: 1rem auto;
 }
 
-.header__content h2::before {
-  position: absolute;
+
+.header__content h2::before,
+.header__content h2::after {
   content: "";
-  top: 50%;
-  left: 0;
-  transform: translate(calc(-100% - 1rem), -50%);
+  flex: 1;
   height: 2px;
-  width: 220%;
   background-color: var(--white);
 }
+
 
 .header__content h1 {
   font-size: 3rem;
@@ -701,6 +701,7 @@ footer p {
   padding-bottom: 20px;
 
 }
+
 
 
 
