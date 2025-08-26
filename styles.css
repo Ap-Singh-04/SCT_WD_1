@@ -177,6 +177,7 @@ nav {
   text-align: center;
 }
 
+
 .header__content h2 {
   position: relative;
   display: flex;   
@@ -190,7 +191,6 @@ nav {
   margin: 1rem auto;
 }
 
-
 .header__content h2::before,
 .header__content h2::after {
   content: "";
@@ -198,6 +198,7 @@ nav {
   height: 2px;
   background-color: var(--white);
 }
+
 
 
 .header__content h1 {
@@ -701,6 +702,7 @@ footer p {
   padding-bottom: 20px;
 
 }
+
 
 
 
