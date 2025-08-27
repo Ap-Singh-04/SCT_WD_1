@@ -48,6 +48,17 @@ ScrollReveal().reveal(".header__bar", {
   ...scrollRevealOption,
   delay: 3000,
 });
+
+const navbar = document.querySelector("nav");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
 const transitionEl = document.querySelector(".page-transition");
 const navLinksAll = document.querySelectorAll("nav a");
 
@@ -73,5 +84,6 @@ window.onload = () => {
     transitionEl.classList.remove("active");
   }
 };
+
 
 
