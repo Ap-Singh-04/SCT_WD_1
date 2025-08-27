@@ -35,6 +35,10 @@ nav {
   margin-inline: auto;
   z-index: 9;
 }
+nav.scrolled {
+  background: linear-gradient(#411818, #603333); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
 .nav__header {
   padding: 1rem;
@@ -274,7 +278,7 @@ nav {
 @media (width > 768px) {
   nav {
 
-    padding: 2rem 3rem;
+    padding: 1rem 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -702,6 +706,7 @@ footer p {
   padding-bottom: 20px;
 
 }
+
 
 
 
