@@ -23,7 +23,7 @@ Here are some highlights:
 3. Scientific Calculator (https://ap-singh-04.github.io/SCT_WD_2/)
 
 4. Finance Tracker Dashboard 
-(https://ap-singh-04.github.io/Finance-tracker/)
+(https://ap-singh-04.github.io/Finance-Tracker-WebApp/)
 ---
 
 ## ✉️ Contact
